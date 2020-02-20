@@ -9,15 +9,15 @@ using namespace std;
 
 int main() {
     //Initialize Items
-    item i1("tuna", .50, 2.50, 6);
-    item i2("porkchop", .75, 6.50, 10);
-    item i3("sausage", .60, 4.41, 20);
-    item i4("bananas", .20, 1.50, 30);
-    item i5("apples", .15, 1.10, 25);
-    item i6("grapes", .42, 1.65, 65);
-    item i7("ravioli", .80, 8.40, 8);
-    item i8("alfredo", .72, 6.54, 9);
-    item i9("spaghetti", .63, 5.36, 21);
+    item i1("tuna", .50, 2.50, 800);
+    item i2("porkchop", .75, 6.50, 500);
+    item i3("sausage", .60, 4.41, 800);
+    item i4("bananas", .20, 1.50, 700);
+    item i5("apples", .15, 1.10, 550);
+    item i6("grapes", .42, 1.65, 650);
+    item i7("ravioli", .80, 8.40, 180);
+    item i8("alfredo", .72, 6.54, 190);
+    item i9("spaghetti", .63, 5.36, 500);
 
     //Initialize each Isle with a name and a vector of items
     Isle is1("Meats", {i1, i2, i3});
@@ -30,16 +30,16 @@ int main() {
     isles.push_back(is2);
     isles.push_back(is3);
 
+    //Declare Store obj and begin making sales/logging business days
     Store s1(isles);
     s1.makeSale(i1);
-    s1.printStore();
     s1.logBusinessDay();
+
+    //Print results
+    s1.printStore();
+    cout << s1.getBusinessDays()[0] << endl;
     cout << s1.getTotalEarnings() << endl;
-    cout << "Justin, stayed up pretty late this morning working on this so I didn't have time to write\nmany comments,"
-            "text me on facebook messenger when you read this with any questions you have and I'll brief you on the\n"
-            "child class you'll be making and explain the code I wrote. I still need to finish the main.cpp program"
-            "and finish implementing the customer class. The Store class is the parent class and the Store has-a"
-            "isle class (vector of isle classes actually). Think of it like a grocery store." << endl;
+
 
 
 
