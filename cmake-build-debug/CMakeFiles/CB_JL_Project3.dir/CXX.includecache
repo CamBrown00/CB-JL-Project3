@@ -6,9 +6,17 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/wifit/Desktop/School/cs120/CB-JL-Project3/Isle.cpp
+C:/Users/Hien/Desktop/CB-JL-Project3/Customer.h
+iostream
+-
+vector
+-
 Isle.h
-C:/Users/wifit/Desktop/School/cs120/CB-JL-Project3/Isle.h
+C:/Users/Hien/Desktop/CB-JL-Project3/Isle.h
+
+C:/Users/Hien/Desktop/CB-JL-Project3/Isle.cpp
+Isle.h
+C:/Users/Hien/Desktop/CB-JL-Project3/Isle.h
 vector
 -
 iostream
@@ -16,9 +24,41 @@ iostream
 iomanip
 -
 
-C:/Users/wifit/Desktop/School/cs120/CB-JL-Project3/Isle.h
+C:/Users/Hien/Desktop/CB-JL-Project3/Isle.h
 iostream
 -
 vector
 -
+
+C:/Users/Hien/Desktop/CB-JL-Project3/Store.cpp
+Store.h
+C:/Users/Hien/Desktop/CB-JL-Project3/Store.h
+Isle.h
+C:/Users/Hien/Desktop/CB-JL-Project3/Isle.h
+vector
+-
+iostream
+-
+
+C:/Users/Hien/Desktop/CB-JL-Project3/Store.h
+iostream
+-
+vector
+-
+Isle.h
+C:/Users/Hien/Desktop/CB-JL-Project3/Isle.h
+
+C:/Users/Hien/Desktop/CB-JL-Project3/main.cpp
+iostream
+-
+iomanip
+-
+vector
+-
+Store.h
+C:/Users/Hien/Desktop/CB-JL-Project3/Store.h
+Isle.h
+C:/Users/Hien/Desktop/CB-JL-Project3/Isle.h
+Customer.h
+C:/Users/Hien/Desktop/CB-JL-Project3/Customer.h
 
