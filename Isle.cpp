@@ -12,7 +12,8 @@ item::item(string name, double unitCost, double unitPrice, int quantity) : name(
 }
 
 ostream& operator << (ostream& outs, const item &it) {
-    outs << setw(15) << it.name << " x " << it.quantity << setw(5) << "|";
+    string itemName = it.name + " x " + to_string(it.quantity);
+    outs << left << setw(20) << itemName << right << " | ";
     return outs;
 }
 
@@ -34,12 +35,17 @@ Isle::Isle(string name, vector<item> items) : name(name), items(items) , isleCos
 //Non-trivial methods
 void Isle::refreshIsle() {
     for (int i = 0; i < items.size(); ++i) {
+        if (items[i].quantity < 0){
+            items[i].quantity = 0;
+        }
         isleCost += (items[i].unitCost * items[i].quantity);
         islePrice += (items[i].unitPrice * items[i].quantity);
         itemQuantity += items[i].quantity;
-        if (items[i].quantity <= 0){
+        /*
+        if (items[i].quantity < 0){
             items.erase(items.begin() + i);
         }
+         */
     }
 }
 
@@ -97,9 +103,10 @@ void Isle::setName(string name) {
 
 //Overloaded Operators
 ostream& operator << (ostream& outs, const Isle &is) {
-    outs << is.name << " Isle: ";
+    string isleName = is.name + " Isle:";
+    outs << left << setw(15) << isleName;
     for(int i = 0; i < is.items.size(); ++i) {
-        outs << is.items[i];
+        outs << setw(30) << left << is.items[i];
     }
     return outs;
 }
