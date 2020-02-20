@@ -11,11 +11,10 @@ using namespace std;
 struct businessDay{
     double earnings;
     int customerCount;
-    int date;
 
     //Constructors
     businessDay();
-    businessDay(double earnings, int customerCount, int date);
+    businessDay(double earnings, int customerCount);
 
     //Overloaded Operators
     friend ostream& operator << (ostream& outs, const businessDay &bd);
@@ -27,6 +26,7 @@ struct businessDay{
 class Store{
 private:
     vector<Isle> isles;
+    vector<Isle> islesBackup;
     vector<businessDay> businessDays;
     businessDay currentBusinessDay;
     double totalEarnings;
@@ -42,7 +42,9 @@ public:
     void addIsle(Isle is);
     void logBusinessDay();
     void makeSale(item it);
+    void makeSales(vector<item> items);
     void printStore();
+    void restockIsles();
 
     //Getters and setters
     vector<Isle> getIsles();
