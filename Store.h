@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include "Isle.h"
 
 using namespace std;
 
@@ -29,9 +30,23 @@ struct businessDay{
 
 class Store{
 private:
-    vector<vector<string>> isles;
+    vector<vector<Isle>> isles;
+    vector<businessDay> businessDays;
+    int totalCost;
+    int totalEarnings;
+    int customerCount;
 
 public:
+
+    //Constructors
+    Store();
+    Store(vector<vector<Isle>>);
+
+    //Non-trivial methods
+    void logDay();
+    void clearCurrentDay();
+    void makeSale();
+    void printStore();
 
 
 };
