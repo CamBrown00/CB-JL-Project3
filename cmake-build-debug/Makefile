@@ -149,6 +149,33 @@ Isle.cpp.s:
 	$(MAKE) -f CMakeFiles\CB_JL_Project3.dir\build.make CMakeFiles/CB_JL_Project3.dir/Isle.cpp.s
 .PHONY : Isle.cpp.s
 
+Store.obj: Store.cpp.obj
+
+.PHONY : Store.obj
+
+# target to build an object file
+Store.cpp.obj:
+	$(MAKE) -f CMakeFiles\CB_JL_Project3.dir\build.make CMakeFiles/CB_JL_Project3.dir/Store.cpp.obj
+.PHONY : Store.cpp.obj
+
+Store.i: Store.cpp.i
+
+.PHONY : Store.i
+
+# target to preprocess a source file
+Store.cpp.i:
+	$(MAKE) -f CMakeFiles\CB_JL_Project3.dir\build.make CMakeFiles/CB_JL_Project3.dir/Store.cpp.i
+.PHONY : Store.cpp.i
+
+Store.s: Store.cpp.s
+
+.PHONY : Store.s
+
+# target to generate assembly for a file
+Store.cpp.s:
+	$(MAKE) -f CMakeFiles\CB_JL_Project3.dir\build.make CMakeFiles/CB_JL_Project3.dir/Store.cpp.s
+.PHONY : Store.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -188,6 +215,9 @@ help:
 	@echo ... Isle.obj
 	@echo ... Isle.i
 	@echo ... Isle.s
+	@echo ... Store.obj
+	@echo ... Store.i
+	@echo ... Store.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

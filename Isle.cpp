@@ -25,6 +25,7 @@ Isle::Isle() : name("Misc"), items({}), isleCost(0.0), islePrice(0.0), itemQuant
 }
 
 Isle::Isle(string name, vector<item> items) : name(name), items(items) , isleCost(0.0), islePrice(0.0), itemQuantity(0) {
+    refreshIsle();
 }
 
 void Isle::refreshIsle() {
@@ -54,9 +55,9 @@ void Isle::removeItem(item it) {
     for (int i = 0; i < items.size(); ++i) {
         if (items[i].name == it.name){
             items[i].quantity -= it.quantity;
+            refreshIsle();
         }
     }
-    refreshIsle();
 }
 
 string Isle::getName() {

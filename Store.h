@@ -30,9 +30,9 @@ struct businessDay{
 
 class Store{
 private:
-    vector<vector<Isle>> isles;
+    vector<Isle> isles;
     vector<businessDay> businessDays;
-    int totalCost;
+    businessDay currentBusinessDay;
     int totalEarnings;
     int customerCount;
 
@@ -40,13 +40,15 @@ public:
 
     //Constructors
     Store();
-    Store(vector<vector<Isle>>);
+    Store(vector<Isle> isles);
 
     //Non-trivial methods
-    void logDay();
-    void clearCurrentDay();
-    void makeSale();
+    void addIsle(Isle is);
+    void logBusinessDay();
+    void makeSale(item it);
     void printStore();
+
+    //Getters and setters
 
 
 };
