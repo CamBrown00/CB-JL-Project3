@@ -7,22 +7,18 @@ using namespace std;
 #ifndef CB_JL_PROJECT3_STORE_H
 #define CB_JL_PROJECT3_STORE_H
 
-/*
- *
- */
 
 struct businessDay{
     double earnings;
     int customerCount;
-    string topItem;
     int date;
 
     //Constructors
     businessDay();
-    businessDay(double earnings, int customerCount, string topItem, int date);
+    businessDay(double earnings, int customerCount, int date);
 
     //Overloaded Operators
-    friend ostream& operator << (ostream& outs, const businessDay &bD);
+    friend ostream& operator << (ostream& outs, const businessDay &bd);
     friend bool operator > (businessDay &lhs, businessDay &rhs);
     friend bool operator < (businessDay &lhs, businessDay &rhs);
     friend bool operator == (businessDay &lhs, businessDay &rhs);
@@ -33,7 +29,7 @@ private:
     vector<Isle> isles;
     vector<businessDay> businessDays;
     businessDay currentBusinessDay;
-    int totalEarnings;
+    double totalEarnings;
     int customerCount;
 
 public:
@@ -49,7 +45,11 @@ public:
     void printStore();
 
     //Getters and setters
-
+    vector<Isle> getIsles();
+    vector<businessDay> getBusinessDays();
+    businessDay getCurrentBusinessDay();
+    double getTotalEarnings();
+    int getCustomerCount();
 
 };
 

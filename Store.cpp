@@ -6,10 +6,10 @@
 //businessDay struct
 
 //Constructors
-businessDay::businessDay() : earnings(0.0), customerCount(0), topItem("None"), date(0) {
+businessDay::businessDay() : earnings(0.0), customerCount(0), date(0) {
 }
 
-businessDay::businessDay(double earnings, int customerCount, string topItem, int date) : earnings(earnings), customerCount(customerCount), topItem(topItem), date(date) {
+businessDay::businessDay(double earnings, int customerCount, int date) : earnings(earnings), customerCount(customerCount), date(date) {
 }
 
 //Overloaded Operators
@@ -38,20 +38,20 @@ Store::Store() : isles({}), businessDays({}), totalEarnings(0), customerCount(0)
     currentBusinessDay = b;
 }
 
-Store::Store(vector<Isle> isles) : isles(isles), businessDays({}), totalEarnings(0), customerCount(0) {
+Store::Store(vector<Isle> isles) : isles(isles), businessDays({}), totalEarnings(0.0), customerCount(0) {
     businessDay b;
     currentBusinessDay = b;
 }
 
-//Non-trivial methods
 void Store::addIsle(Isle is) {
     isles.push_back(is);
 }
 
+//Non-trivial methods
 void Store::logBusinessDay() {
     //Calculate earnings for the current business day based on sum of earnings values stored in each isle object
     for (int i = 0; i < isles.size(); ++i) {
-        currentBusinessDay.earnings += isles[i].getIslePrice() - isles[i].getIsleCost();
+        currentBusinessDay.earnings += isles[i].getIsleEarnings();
     }
     //Add current business day data to Store total fields
     customerCount += currentBusinessDay.customerCount;
@@ -71,5 +71,29 @@ void Store::makeSale(item it) {
 }
 
 void Store::printStore() {
+    for (int i = 0; i < isles.size(); ++i) {
+        cout << isles[i] << endl;
+    }
+}
 
+//Getters and Setters
+
+vector<Isle> Store::getIsles() {
+    return isles;
+}
+
+vector<businessDay> Store::getBusinessDays() {
+    return businessDays;
+}
+
+businessDay Store::getCurrentBusinessDay() {
+    return currentBusinessDay;
+}
+
+double Store::getTotalEarnings() {
+    return totalEarnings;
+}
+
+int Store::getCustomerCount() {
+    return customerCount;
 }

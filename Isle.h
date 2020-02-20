@@ -17,7 +17,7 @@ struct item{
     item(string name, double unitCost, double unitPrice, int quantity);
 
     //Overloaded Operators
-    friend ostream& operator << (ostream& outs, const item &bD);
+    friend ostream& operator << (ostream& outs, const item &it);
     friend bool operator == (item &lhs, item &rhs);
 };
 
@@ -27,6 +27,7 @@ private:
     vector<item> items;
     double isleCost;
     double islePrice;
+    double isleEarnings;
     int itemQuantity;
 
 public:
@@ -47,7 +48,11 @@ public:
     double getIsleCost();
     double getIslePrice();
     int getItemQuantity();
+    double getIsleEarnings();
     void setName(string name);
+
+    //Overloaded Operators
+    friend ostream& operator << (ostream& outs, const Isle &is);
 };
 
 #endif //CB_JL_PROJECT3_ISLE_H

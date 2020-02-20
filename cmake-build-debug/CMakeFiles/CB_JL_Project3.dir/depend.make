@@ -8,5 +8,8 @@ CMakeFiles/CB_JL_Project3.dir/Store.cpp.obj: ../Isle.h
 CMakeFiles/CB_JL_Project3.dir/Store.cpp.obj: ../Store.cpp
 CMakeFiles/CB_JL_Project3.dir/Store.cpp.obj: ../Store.h
 
+CMakeFiles/CB_JL_Project3.dir/main.cpp.obj: ../Customer.h
+CMakeFiles/CB_JL_Project3.dir/main.cpp.obj: ../Isle.h
+CMakeFiles/CB_JL_Project3.dir/main.cpp.obj: ../Store.h
 CMakeFiles/CB_JL_Project3.dir/main.cpp.obj: ../main.cpp
 

@@ -1,6 +1,7 @@
 #include "Isle.h"
 #include <vector>
 #include <iostream>
+#include <iomanip>
 
 //Item Struct
 
@@ -11,7 +12,7 @@ item::item(string name, double unitCost, double unitPrice, int quantity) : name(
 }
 
 ostream& operator << (ostream& outs, const item &it) {
-    outs << "Item name: " << it.name << "\tQuantity: " << it.quantity;
+    outs << setw(15) << it.name << " x " << it.quantity << setw(5) << "|";
     return outs;
 }
 
@@ -21,13 +22,16 @@ bool operator == (item &lhs, item &rhs) {
 
 //Isle Class
 
-Isle::Isle() : name("Misc"), items({}), isleCost(0.0), islePrice(0.0), itemQuantity(0) {
+//Constructors
+Isle::Isle() : name("Misc"), items({}), isleCost(0.0), islePrice(0.0), itemQuantity(0), isleEarnings(0) {
 }
 
-Isle::Isle(string name, vector<item> items) : name(name), items(items) , isleCost(0.0), islePrice(0.0), itemQuantity(0) {
+Isle::Isle(string name, vector<item> items) : name(name), items(items) , isleCost(0.0), islePrice(0.0), itemQuantity(0), isleEarnings(0) {
     refreshIsle();
 }
 
+
+//Non-trivial methods
 void Isle::refreshIsle() {
     for (int i = 0; i < items.size(); ++i) {
         isleCost += (items[i].unitCost * items[i].quantity);
@@ -54,12 +58,15 @@ void Isle::addItems(vector<item> items) {
 void Isle::removeItem(item it) {
     for (int i = 0; i < items.size(); ++i) {
         if (items[i].name == it.name){
+            isleEarnings += ((items[i].unitPrice - items[i].unitCost) * items[i].quantity);
             items[i].quantity -= it.quantity;
             refreshIsle();
         }
     }
 }
 
+
+//Getters and setters
 string Isle::getName() {
     return name;
 }
@@ -80,6 +87,19 @@ int Isle::getItemQuantity() {
     return itemQuantity;
 }
 
+double Isle::getIsleEarnings() {
+    return isleEarnings;
+}
+
 void Isle::setName(string name) {
     this->name = name;
+}
+
+//Overloaded Operators
+ostream& operator << (ostream& outs, const Isle &is) {
+    outs << is.name << " Isle: ";
+    for(int i = 0; i < is.items.size(); ++i) {
+        outs << is.items[i];
+    }
+    return outs;
 }
