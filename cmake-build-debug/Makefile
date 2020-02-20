@@ -122,6 +122,33 @@ CB_JL_Project3/fast:
 	$(MAKE) -f CMakeFiles\CB_JL_Project3.dir\build.make CMakeFiles/CB_JL_Project3.dir/build
 .PHONY : CB_JL_Project3/fast
 
+Isle.obj: Isle.cpp.obj
+
+.PHONY : Isle.obj
+
+# target to build an object file
+Isle.cpp.obj:
+	$(MAKE) -f CMakeFiles\CB_JL_Project3.dir\build.make CMakeFiles/CB_JL_Project3.dir/Isle.cpp.obj
+.PHONY : Isle.cpp.obj
+
+Isle.i: Isle.cpp.i
+
+.PHONY : Isle.i
+
+# target to preprocess a source file
+Isle.cpp.i:
+	$(MAKE) -f CMakeFiles\CB_JL_Project3.dir\build.make CMakeFiles/CB_JL_Project3.dir/Isle.cpp.i
+.PHONY : Isle.cpp.i
+
+Isle.s: Isle.cpp.s
+
+.PHONY : Isle.s
+
+# target to generate assembly for a file
+Isle.cpp.s:
+	$(MAKE) -f CMakeFiles\CB_JL_Project3.dir\build.make CMakeFiles/CB_JL_Project3.dir/Isle.cpp.s
+.PHONY : Isle.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -158,6 +185,9 @@ help:
 	@echo ... CB_JL_Project3
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... Isle.obj
+	@echo ... Isle.i
+	@echo ... Isle.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

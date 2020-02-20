@@ -3,4 +3,4 @@ project(CB_JL_Project3)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(CB_JL_Project3 main.cpp Store.h Isle.h)
+add_executable(CB_JL_Project3 main.cpp Store.h Isle.h Customer.h Isle.cpp)

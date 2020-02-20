@@ -10,19 +10,14 @@ struct item{
     string name;
     double unitCost;
     double unitPrice;
-    double totalCost;
-    double totalPrice;
     int quantity;
 
     //Constructors
     item();
     item(string name, double unitCost, double unitPrice, int quantity);
-    item(string name, double unitCost, double unitPrice, double totalCost, double totalPrice, int quantity);
 
     //Overloaded Operators
     friend ostream& operator << (ostream& outs, const item &bD);
-    friend bool operator > (item &lhs, item &rhs);
-    friend bool operator < (item &lhs, item &rhs);
     friend bool operator == (item &lhs, item &rhs);
 };
 
@@ -38,7 +33,7 @@ public:
 
     //Constructors
     Isle();
-    Isle(string name, vector<item> items, double isleCost, double islePrice, int itemQuantity);
+    Isle(string name, vector<item> items);
 
     //Non-trivial methods
     void addItem(item it);
@@ -48,7 +43,7 @@ public:
 
     //Getters and Setters
     string getName();
-    vector<item> getItem();
+    vector<item> getItems();
     double getIsleCost();
     double getIslePrice();
     int getItemQuantity();
