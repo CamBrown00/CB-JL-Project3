@@ -1,12 +1,18 @@
 #include "Grocery.h"
 
 //Constructors
-Grocery::Grocery(): Store(){
+Grocery::Grocery(): Store() {
+    this->isles = isles;
+    totalEarnings = 0.0;
+    customerCount = 0;
     businessDay b;
     currentBusinessDay = b;
 }
 
 Grocery::Grocery(vector<Isle> isles):Store() {
+    this->isles = isles;
+    totalEarnings = 0.0;
+    customerCount = 0;
     businessDay b;
     currentBusinessDay = b;
 }

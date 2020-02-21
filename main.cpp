@@ -19,27 +19,34 @@ int main() {
     item i7("ravioli", .80, 8.40, 180);
     item i8("alfredo", .72, 6.54, 190);
     item i9("spaghetti", .63, 5.36, 500);
+    item i10("utensils", 1.5, 15.00, 200);
+    item i11("pots", 1.0, 20.0, 300);
+    item i12("pans", 1.1, 21.0, 300);
 
     //Initialize each Isle with a name and a vector of items
     Isle is1("Meats", {i1, i2, i3});
     Isle is2("Fruits", {i4, i5, i6});
     Isle is3("Pasta", {i7, i8, i9});
+    Isle is4("Kitchenware", {i10, i11, i12});
 
     //Declare vector<Isle> and push Isles onto it
     vector<Isle> isles;
     isles.push_back(is1);
     isles.push_back(is2);
     isles.push_back(is3);
+    isles.push_back(is4);
 
     //Declare Store obj and begin making sales/logging business days
-    Store s1(isles);
-    s1.makeSale(i1);
-    s1.logBusinessDay();
+    Grocery g1(isles);
+
+    g1.makeSale(i1);
+    g1.logBusinessDay();
 
     //Print results
-    s1.printStore();
-    cout << s1.getBusinessDays()[0] << endl;
-    cout << s1.getTotalEarnings() << endl;
+    g1.printStore();
+
+    cout << g1.getBusinessDays()[0] << endl;
+    cout << g1.getTotalEarnings() << endl;
 
 
 

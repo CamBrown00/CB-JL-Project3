@@ -9,7 +9,8 @@ using namespace std;
 
 class Customer{
 private:
-    double funds;
+    double wallet;
+    double walletBackup;
     vector<item> purchasedItems;
 
 public:
@@ -18,10 +19,17 @@ public:
     Customer();
     Customer(double wallet);
 
+    //Non-trivial Methods
+    void purchaseItem(item it);
+    void purchaseItems(vector<item> items);
+
     //Getters and setters
     double getWallet();
     vector<item> getPurchasedItems();
     void setFunds(double wallet);
+
+    //Overloaded Operators
+    friend ostream& operator << (ostream& outs, const Customer &c);
 
 };
 

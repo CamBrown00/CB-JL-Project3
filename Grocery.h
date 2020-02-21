@@ -1,3 +1,6 @@
+#include <vector>
+#include "Store.h"
+
 #ifndef CB_JL_PROJECT3_GROCERY_H
 #define CB_JL_PROJECT3_GROCERY_H
 class Grocery: public Store {

@@ -34,7 +34,7 @@ bool operator < (businessDay &lhs, businessDay &rhs) {
 //Store class
 
 //Constructors
-Store::Store() : isles({}), islesBackup({}), businessDays({}), totalEarnings(0), customerCount(0) {
+Store::Store() : isles({}), islesBackup({}), businessDays({}), totalEarnings(0.0), customerCount(0) {
     businessDay b;
     currentBusinessDay = b;
 }
