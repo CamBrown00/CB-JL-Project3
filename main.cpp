@@ -4,6 +4,7 @@
 #include "Store.h"
 #include "Isle.h"
 #include "Customer.h"
+#include "Grocery.h"
 
 using namespace std;
 
