@@ -1,10 +1,10 @@
 file(REMOVE_RECURSE
-  "CB_JL_Project3.exe"
-  "CB_JL_Project3.exe.manifest"
-  "CB_JL_Project3.pdb"
+  "CMakeFiles/CB_JL_Project3.dir/main.cpp.obj"
   "CMakeFiles/CB_JL_Project3.dir/Isle.cpp.obj"
   "CMakeFiles/CB_JL_Project3.dir/Store.cpp.obj"
-  "CMakeFiles/CB_JL_Project3.dir/main.cpp.obj"
+  "CB_JL_Project3.pdb"
+  "CB_JL_Project3.exe"
+  "CB_JL_Project3.exe.manifest"
   "libCB_JL_Project3.dll.a"
 )
 
