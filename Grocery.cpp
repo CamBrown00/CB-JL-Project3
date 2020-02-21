@@ -33,7 +33,5 @@ double Grocery::getPriceDifference() {
     return priceDifference;
 }
 void Grocery::setPriceDifference(double diff) {
-    //Difference is set by percentage
-    double temp = (diff / 100)+1;
-    priceDifference = temp;
+    priceDifference = diff;
 }
