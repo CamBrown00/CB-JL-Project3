@@ -24,7 +24,7 @@ struct businessDay{
 };
 
 class Store{
-private:
+protected:
     vector<Isle> isles;
     vector<Isle> islesBackup;
     vector<businessDay> businessDays;
@@ -40,7 +40,7 @@ public:
 
     //Non-trivial methods
     void addIsle(Isle is);
-    void logBusinessDay();
+    virtual void logBusinessDay();
     void makeSale(item it);
     void makeSales(vector<item> items);
     void printStore();
