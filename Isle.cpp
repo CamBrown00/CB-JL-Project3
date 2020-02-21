@@ -42,10 +42,11 @@ void Isle::refreshIsle() {
         islePrice += (items[i].unitPrice * items[i].quantity);
         itemQuantity += items[i].quantity;
         /*
+        //Code to completely remove sold out items from the vector, commented out for now but might use later
         if (items[i].quantity < 0){
             items.erase(items.begin() + i);
         }
-         */
+        */
     }
 }
 
@@ -64,7 +65,7 @@ void Isle::addItems(vector<item> items) {
 void Isle::removeItem(item it) {
     for (int i = 0; i < items.size(); ++i) {
         if (items[i].name == it.name){
-            isleEarnings += ((items[i].unitPrice - items[i].unitCost) * items[i].quantity);
+            isleEarnings += ((it.unitPrice - it.unitCost) * it.quantity);
             items[i].quantity -= it.quantity;
             refreshIsle();
         }
@@ -104,9 +105,9 @@ void Isle::setName(string name) {
 //Overloaded Operators
 ostream& operator << (ostream& outs, const Isle &is) {
     string isleName = is.name + " Isle:";
-    outs << left << setw(15) << isleName;
+    outs << left << setw(25) << isleName;
     for(int i = 0; i < is.items.size(); ++i) {
-        outs << setw(30) << left << is.items[i];
+        outs << setw(50) << left << is.items[i];
     }
     return outs;
 }

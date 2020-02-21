@@ -82,6 +82,8 @@ void Store::printStore() {
     for (int i = 0; i < isles.size(); ++i) {
         cout << isles[i] << endl;
     }
+    cout << "\nSTORE DATA: " << endl;
+    cout << left << setw(20) << "Total Earnings: " << totalEarnings << left << setw(20) << "\tCustomer Count: " << customerCount << endl;
 }
 
 void Store::restockIsles() {

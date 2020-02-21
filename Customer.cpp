@@ -13,13 +13,15 @@ Customer::Customer(double wallet) : wallet(wallet), walletBackup(wallet), purcha
 }
 
 //Non-trivial Methods
-void Customer::purchaseItem(item it) {
+void Customer::purchaseItem(item it, Store &s, int quantity) {
+    item tempItem(it.name, it.unitCost, it.unitPrice, quantity);
     purchasedItems.push_back(it);
     wallet -= (it.unitPrice * it.quantity);
+    s.makeSale(tempItem);
 }
-void Customer::purchaseItems(vector<item> items) {
+void Customer::purchaseItems(vector<item> items, Store &s, int quantity) {
     for (int i = 0; i < items.size(); ++i){
-        purchaseItem(items[i]);
+        purchaseItem(items[i], s, quantity);
     }
 }
 
@@ -32,8 +34,12 @@ vector<item> Customer::getPurchasedItems() {
     return purchasedItems;
 }
 
-void Customer::setFunds(double wallet) {
+void Customer::setWallet(double wallet) {
     this->wallet = wallet;
+}
+
+void Customer::setWalletBackup(double wallet) {
+    walletBackup = wallet;
 }
 
 //Overloaded Operators

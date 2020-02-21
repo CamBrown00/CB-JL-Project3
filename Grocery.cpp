@@ -1,3 +1,9 @@
+/*
+ * This is the child class of Store.cpp.
+ * This class features a modified version the logBusinessDay method from Store.cpp,
+ * as well as some modified logic for determining the store earnings.
+ */
+
 #include "Grocery.h"
 
 //Constructors
@@ -11,6 +17,7 @@ Grocery::Grocery(): Store() {
 
 Grocery::Grocery(vector<Isle> isles):Store() {
     this->isles = isles;
+    islesBackup = isles;
     totalEarnings = 0.0;
     customerCount = 0;
     businessDay b;
@@ -18,6 +25,8 @@ Grocery::Grocery(vector<Isle> isles):Store() {
 }
 
 //Non-trivial methods
+
+//Modified version of the logBusinessDay function from Store.cpp to better fit the grocery store model
 void Grocery::logBusinessDay() {
     //Calculate earnings for the current business day based on sum of earnings values stored in each isle object
     for (int i = 0; i < isles.size(); ++i) {
