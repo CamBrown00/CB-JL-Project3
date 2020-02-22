@@ -1,3 +1,10 @@
+/*
+ * This is the Component class for the project.
+ * This class is meant to model the isles within the Store.cpp, contains a vector of items to models items on shelves
+ * There are functions in this class for removing items from isles, adding items, assessing isle data, etc.
+ * This class also contains a struct for items that holds an item name, price data and quantity
+ */
+
 #include <iostream>
 #include <vector>
 

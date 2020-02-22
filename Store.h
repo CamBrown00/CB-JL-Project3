@@ -1,3 +1,10 @@
+/*
+ * This is the parent class for the project.
+ * This class is meant to model a grocery store for the purpose of simulating business days and transactions.
+ * There are functions in this class for making sales, adding isles to the store, logging business days, etc.
+ * This class also contains a struct for business days that keeps track of earnings and the customer count.
+ */
+
 #include <iostream>
 #include <vector>
 #include "Isle.h"
