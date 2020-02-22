@@ -122,6 +122,19 @@ CB_JL_Project3/fast:
 	$(MAKE) -f CMakeFiles\CB_JL_Project3.dir\build.make CMakeFiles/CB_JL_Project3.dir/build
 .PHONY : CB_JL_Project3/fast
 
+#=============================================================================
+# Target rules for targets named Project3_Testing
+
+# Build rule for target.
+Project3_Testing: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 Project3_Testing
+.PHONY : Project3_Testing
+
+# fast build rule for target.
+Project3_Testing/fast:
+	$(MAKE) -f CMakeFiles\Project3_Testing.dir\build.make CMakeFiles/Project3_Testing.dir/build
+.PHONY : Project3_Testing/fast
+
 Customer.obj: Customer.cpp.obj
 
 .PHONY : Customer.obj
@@ -129,6 +142,7 @@ Customer.obj: Customer.cpp.obj
 # target to build an object file
 Customer.cpp.obj:
 	$(MAKE) -f CMakeFiles\CB_JL_Project3.dir\build.make CMakeFiles/CB_JL_Project3.dir/Customer.cpp.obj
+	$(MAKE) -f CMakeFiles\Project3_Testing.dir\build.make CMakeFiles/Project3_Testing.dir/Customer.cpp.obj
 .PHONY : Customer.cpp.obj
 
 Customer.i: Customer.cpp.i
@@ -138,6 +152,7 @@ Customer.i: Customer.cpp.i
 # target to preprocess a source file
 Customer.cpp.i:
 	$(MAKE) -f CMakeFiles\CB_JL_Project3.dir\build.make CMakeFiles/CB_JL_Project3.dir/Customer.cpp.i
+	$(MAKE) -f CMakeFiles\Project3_Testing.dir\build.make CMakeFiles/Project3_Testing.dir/Customer.cpp.i
 .PHONY : Customer.cpp.i
 
 Customer.s: Customer.cpp.s
@@ -147,6 +162,7 @@ Customer.s: Customer.cpp.s
 # target to generate assembly for a file
 Customer.cpp.s:
 	$(MAKE) -f CMakeFiles\CB_JL_Project3.dir\build.make CMakeFiles/CB_JL_Project3.dir/Customer.cpp.s
+	$(MAKE) -f CMakeFiles\Project3_Testing.dir\build.make CMakeFiles/Project3_Testing.dir/Customer.cpp.s
 .PHONY : Customer.cpp.s
 
 Grocery.obj: Grocery.cpp.obj
@@ -156,6 +172,7 @@ Grocery.obj: Grocery.cpp.obj
 # target to build an object file
 Grocery.cpp.obj:
 	$(MAKE) -f CMakeFiles\CB_JL_Project3.dir\build.make CMakeFiles/CB_JL_Project3.dir/Grocery.cpp.obj
+	$(MAKE) -f CMakeFiles\Project3_Testing.dir\build.make CMakeFiles/Project3_Testing.dir/Grocery.cpp.obj
 .PHONY : Grocery.cpp.obj
 
 Grocery.i: Grocery.cpp.i
@@ -165,6 +182,7 @@ Grocery.i: Grocery.cpp.i
 # target to preprocess a source file
 Grocery.cpp.i:
 	$(MAKE) -f CMakeFiles\CB_JL_Project3.dir\build.make CMakeFiles/CB_JL_Project3.dir/Grocery.cpp.i
+	$(MAKE) -f CMakeFiles\Project3_Testing.dir\build.make CMakeFiles/Project3_Testing.dir/Grocery.cpp.i
 .PHONY : Grocery.cpp.i
 
 Grocery.s: Grocery.cpp.s
@@ -174,6 +192,7 @@ Grocery.s: Grocery.cpp.s
 # target to generate assembly for a file
 Grocery.cpp.s:
 	$(MAKE) -f CMakeFiles\CB_JL_Project3.dir\build.make CMakeFiles/CB_JL_Project3.dir/Grocery.cpp.s
+	$(MAKE) -f CMakeFiles\Project3_Testing.dir\build.make CMakeFiles/Project3_Testing.dir/Grocery.cpp.s
 .PHONY : Grocery.cpp.s
 
 Isle.obj: Isle.cpp.obj
@@ -183,6 +202,7 @@ Isle.obj: Isle.cpp.obj
 # target to build an object file
 Isle.cpp.obj:
 	$(MAKE) -f CMakeFiles\CB_JL_Project3.dir\build.make CMakeFiles/CB_JL_Project3.dir/Isle.cpp.obj
+	$(MAKE) -f CMakeFiles\Project3_Testing.dir\build.make CMakeFiles/Project3_Testing.dir/Isle.cpp.obj
 .PHONY : Isle.cpp.obj
 
 Isle.i: Isle.cpp.i
@@ -192,6 +212,7 @@ Isle.i: Isle.cpp.i
 # target to preprocess a source file
 Isle.cpp.i:
 	$(MAKE) -f CMakeFiles\CB_JL_Project3.dir\build.make CMakeFiles/CB_JL_Project3.dir/Isle.cpp.i
+	$(MAKE) -f CMakeFiles\Project3_Testing.dir\build.make CMakeFiles/Project3_Testing.dir/Isle.cpp.i
 .PHONY : Isle.cpp.i
 
 Isle.s: Isle.cpp.s
@@ -201,6 +222,7 @@ Isle.s: Isle.cpp.s
 # target to generate assembly for a file
 Isle.cpp.s:
 	$(MAKE) -f CMakeFiles\CB_JL_Project3.dir\build.make CMakeFiles/CB_JL_Project3.dir/Isle.cpp.s
+	$(MAKE) -f CMakeFiles\Project3_Testing.dir\build.make CMakeFiles/Project3_Testing.dir/Isle.cpp.s
 .PHONY : Isle.cpp.s
 
 Store.obj: Store.cpp.obj
@@ -210,6 +232,7 @@ Store.obj: Store.cpp.obj
 # target to build an object file
 Store.cpp.obj:
 	$(MAKE) -f CMakeFiles\CB_JL_Project3.dir\build.make CMakeFiles/CB_JL_Project3.dir/Store.cpp.obj
+	$(MAKE) -f CMakeFiles\Project3_Testing.dir\build.make CMakeFiles/Project3_Testing.dir/Store.cpp.obj
 .PHONY : Store.cpp.obj
 
 Store.i: Store.cpp.i
@@ -219,6 +242,7 @@ Store.i: Store.cpp.i
 # target to preprocess a source file
 Store.cpp.i:
 	$(MAKE) -f CMakeFiles\CB_JL_Project3.dir\build.make CMakeFiles/CB_JL_Project3.dir/Store.cpp.i
+	$(MAKE) -f CMakeFiles\Project3_Testing.dir\build.make CMakeFiles/Project3_Testing.dir/Store.cpp.i
 .PHONY : Store.cpp.i
 
 Store.s: Store.cpp.s
@@ -228,6 +252,7 @@ Store.s: Store.cpp.s
 # target to generate assembly for a file
 Store.cpp.s:
 	$(MAKE) -f CMakeFiles\CB_JL_Project3.dir\build.make CMakeFiles/CB_JL_Project3.dir/Store.cpp.s
+	$(MAKE) -f CMakeFiles\Project3_Testing.dir\build.make CMakeFiles/Project3_Testing.dir/Store.cpp.s
 .PHONY : Store.cpp.s
 
 main.obj: main.cpp.obj
@@ -257,6 +282,33 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles\CB_JL_Project3.dir\build.make CMakeFiles/CB_JL_Project3.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+testing.obj: testing.cpp.obj
+
+.PHONY : testing.obj
+
+# target to build an object file
+testing.cpp.obj:
+	$(MAKE) -f CMakeFiles\Project3_Testing.dir\build.make CMakeFiles/Project3_Testing.dir/testing.cpp.obj
+.PHONY : testing.cpp.obj
+
+testing.i: testing.cpp.i
+
+.PHONY : testing.i
+
+# target to preprocess a source file
+testing.cpp.i:
+	$(MAKE) -f CMakeFiles\Project3_Testing.dir\build.make CMakeFiles/Project3_Testing.dir/testing.cpp.i
+.PHONY : testing.cpp.i
+
+testing.s: testing.cpp.s
+
+.PHONY : testing.s
+
+# target to generate assembly for a file
+testing.cpp.s:
+	$(MAKE) -f CMakeFiles\Project3_Testing.dir\build.make CMakeFiles/Project3_Testing.dir/testing.cpp.s
+.PHONY : testing.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -264,6 +316,7 @@ help:
 	@echo ... clean
 	@echo ... depend
 	@echo ... CB_JL_Project3
+	@echo ... Project3_Testing
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... Customer.obj
@@ -281,6 +334,9 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... testing.obj
+	@echo ... testing.i
+	@echo ... testing.s
 .PHONY : help
 
 
