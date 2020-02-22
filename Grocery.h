@@ -5,8 +5,8 @@
 #define CB_JL_PROJECT3_GROCERY_H
 class Grocery: public Store {
 private:
-    //By default there is no price modification
-    double priceDifference = 1;
+    //By default there is no price modification (value of 1)
+    double priceDifference;
 public:
     //Constructors
     Grocery();

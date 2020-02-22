@@ -13,6 +13,7 @@ Grocery::Grocery(): Store() {
     customerCount = 0;
     businessDay b;
     currentBusinessDay = b;
+    priceDifference = .9825;
 }
 
 Grocery::Grocery(vector<Isle> isles):Store() {
@@ -22,6 +23,7 @@ Grocery::Grocery(vector<Isle> isles):Store() {
     customerCount = 0;
     businessDay b;
     currentBusinessDay = b;
+    priceDifference = .9825;
 }
 
 //Non-trivial methods
